@@ -4,12 +4,12 @@ clean:
 	rm -f out/*.jar
 
 out/PollardTask.jar: out/parcs.jar src/PollardTask.java
-	@javac -cp out/parcs.jar src/PollardTask.java
+	@javac -cp out/parcs.jar --release 11 src/PollardTask.java
 	@jar cf out/PollardTask.jar -C src PollardTask.class
 	@rm -f src/PollardTask.class
 
 out/PollardHost.jar: out/parcs.jar src/PollardHost.java
-	@javac -cp out/parcs.jar src/PollardHost.java
+	@javac -cp out/parcs.jar --release 11 src/PollardHost.java
 	@jar cf out/PollardHost.jar -C src PollardHost.class
 	@rm -f src/PollardHost.class
 
