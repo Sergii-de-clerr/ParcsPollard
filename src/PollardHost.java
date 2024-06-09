@@ -22,7 +22,7 @@ public class PollardHost {
         for (int curWIndex = 0; curWIndex < numWorkers; curWIndex++) {
             points[curWIndex] = info.createPoint();
             channels[curWIndex] = points[curWIndex].createChannel();
-            points[curWIndex].execute("PollardTask.jar");
+            points[curWIndex].execute("PollardTask");
 
             System.out.println("Worker " + curWIndex + " will test numbers from " + (curWIndex + 1) + " every " + numWorkers + " to " + NUM_OF_TASKS + ".");
             ArrayList<Integer> data = new ArrayList<>();
